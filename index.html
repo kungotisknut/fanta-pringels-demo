@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FantaPringels</title>
+    <style>
+        /* Style for the gem counter display */
+        .gem-counter {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+            color: greenyellow;
+        }
+
+        /* Style for the image button */
+        .image-button {
+            background-image: url('amongus (2).png'); /* Replace with your image URL */
+            background-size: cover;
+            width: 100px;
+            height: 150px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .start-text {
+            font-size: 21;
+            color: blue;
+            text-align: center;
+        }
+
+        body {
+          background-color: rgb(14,13,23);
+        }
+    </style>
+</head>
+<body>
+    <!-- Display the gem counter -->
+    <h1 class="start-text" >Welcome to FantaPringels.se</h1>
+    <button class="image-button" onclick="addGem()"></button>
+    <a href="type.html">
+    <button>play type game</button>
+    </a>
+
+    <!-- Image button to add gems -->
+    <div class="gem-counter">Gems: <span id="gemCount">0</span></div>
+
+    <script>
+        // Initialize gem counter
+        let gemCount = 0;
+
+        // Function to add gems
+        function addGem() {
+            gemCount++;  // Increment the gem counter by 1
+            document.getElementById("gemCount").textContent = gemCount;  // Update the displayed counter
+        }
+    </script>
+</body>
+</html>
